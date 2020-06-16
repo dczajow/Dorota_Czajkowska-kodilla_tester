@@ -15,6 +15,16 @@ booksToRead[5] = "Potęga kiedy";
         System.out.println(numberOfElements);
         System.out.println( "Moja tablica zawiera 6 elementów.");
 
+        for (int i = 0; i < numberOfElements; i++) {
+            System.out.println(booksToRead[i]);
+
+        }
+        int i = 0;
+        while (i <= 10) {
+            System.out.println(i);
+            i++;
+
+        }
     }
 
 }
