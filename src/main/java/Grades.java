@@ -1,10 +1,4 @@
 
-//10 ocen ucznia. Klasa powinna zawierać 3 metody:
-//
-//dodającą przekazaną w argumencie ocenę do tablicy,
-//zwracającą ostatnio dodaną ocenę,
-//zwracającą średnią ocen.
-
 public class Grades {
     private int[] grades;
     private int size;
@@ -29,15 +23,36 @@ public class Grades {
 
     public void average() {
         int result = 0;
-        for (int i = 0; i < grades.length; i++) {
-            result = result + grades[i];
-        }
-        int avrgGrades = result / grades.length;
+        for (int i = 0; i < this.grades.length; i++) {
+            result = result + grades[i]; }
 
-        System.out.println("Grades' average: : " + avrgGrades);
+        double avrgGrades = result / this.grades.length;
+        System.out.println("Srednia ocen : " + avrgGrades);
     }
 
+
+
     public static void main(String[] args) {
+        Grades myScoresheet = new Grades();
+        myScoresheet.add(5);
+        myScoresheet.add(4);
+        myScoresheet.add(3);
+        myScoresheet.add(4);
+        myScoresheet.add(6);
+        myScoresheet.add(5);
+        myScoresheet.add(4);
+        myScoresheet.add(3);
+        myScoresheet.add(4);
+        myScoresheet.add(6);
+        myScoresheet.add(2);
+
+        System.out.println(myScoresheet.grades.length);
+        myScoresheet.checkLast();
+
+        myScoresheet.average();
+
+
+
 
 
 
