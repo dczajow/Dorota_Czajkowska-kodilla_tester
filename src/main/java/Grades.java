@@ -24,37 +24,22 @@ public class Grades {
     public void average() {
         int result = 0;
         for (int i = 0; i < this.grades.length; i++) {
-            result = result + grades[i]; }
+            result = result + grades[i];
+        }
 
-        double avrgGrades = result / this.grades.length;
+        double avrgGrades = result / this.size;
         System.out.println("Srednia ocen : " + avrgGrades);
     }
-
-
 
     public static void main(String[] args) {
         Grades myScoresheet = new Grades();
         myScoresheet.add(5);
-        myScoresheet.add(4);
         myScoresheet.add(3);
         myScoresheet.add(4);
-        myScoresheet.add(6);
-        myScoresheet.add(5);
-        myScoresheet.add(4);
-        myScoresheet.add(3);
-        myScoresheet.add(4);
-        myScoresheet.add(6);
-        myScoresheet.add(2);
 
-        System.out.println(myScoresheet.grades.length);
+        System.out.println(myScoresheet.size);
         myScoresheet.checkLast();
 
         myScoresheet.average();
-
-
-
-
-
-
     }
 }
