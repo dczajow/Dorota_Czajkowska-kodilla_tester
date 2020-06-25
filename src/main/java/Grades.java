@@ -4,30 +4,30 @@ public class Grades {
     private int size;
 
     public Grades() {
-        this.grades = new int[10];
-        this.size = 0;
+        grades = new int[10];
+        size = 0;
     }
 
     public void add(int value) {
-        if (this.size == 10) {
+        if (size == 10) {
             return;
         }
-        this.grades[this.size] = value;
-        this.size++;
+        grades[size] = value;
+        size++;
     }
 
     public void checkLast() {
-        int i = this.size - 1;
-        System.out.println("Ostatnia dodana ocena: " + this.grades[i]);
+        int i = size - 1;
+        System.out.println("Ostatnia dodana ocena: " + grades[i]);
     }
 
     public void average() {
-        int result = 0;
-        for (int i = 0; i < this.grades.length; i++) {
+        double result = 0;
+        for (int i = 0; i < grades.length; i++) {
             result = result + grades[i];
         }
 
-        double avrgGrades = result / this.size;
+        double avrgGrades = (double) result / size;
         System.out.println("Srednia ocen : " + avrgGrades);
     }
 
@@ -35,7 +35,7 @@ public class Grades {
         Grades myScoresheet = new Grades();
         myScoresheet.add(5);
         myScoresheet.add(3);
-        myScoresheet.add(4);
+        myScoresheet.add(6);
 
         System.out.println(myScoresheet.size);
         myScoresheet.checkLast();
