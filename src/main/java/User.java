@@ -7,14 +7,14 @@ public class User {
         this.age = age;
     }
     public static void main(String[] args) {
-        User Bond = new User("James Bond", 45);
-        User Bourne = new User("Jason Bourne", 38);
-        User Reacher = new User("Jack Reacher", 48);
-        User Hunt = new User("Ethan Hunt", 39);
-        User Ryan = new User("Jack Ryan", 46);
-        User Salt = new User("Evelyn Salt", 40);
+        User bond = new User("James Bond", 45);
+        User bourne = new User("Jason Bourne", 38);
+        User reacher = new User("Jack Reacher", 48);
+        User hunt = new User("Ethan Hunt", 39);
+        User ryan = new User("Jack Ryan", 46);
+        User salt = new User("Evelyn Salt", 40);
 
-        User[] users = {Bond, Bourne, Reacher, Hunt, Ryan, Salt};
+        User[] users = {bond, bourne, reacher, hunt, ryan, salt};
         //int avrgAge = (Bond.age + Bourne.age + Reacher.age + Hunt.age + Ryan.age + Salt.age) / users.length;
         //System.out.println("Average age: " + avrgAge);
 
