@@ -1,4 +1,4 @@
-package com.kodilla.abstracts.homework;
+package com.kodilla.abstracts.homework.jobs;
 
 public class Babysitter extends Job {
     int salary = 2839;

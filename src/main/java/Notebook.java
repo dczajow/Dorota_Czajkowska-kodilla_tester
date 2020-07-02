@@ -22,8 +22,8 @@ public class Notebook {
         }
     }
 
-    public void checkWeight() {
-        if (this.weight == "600g") {
+    /* public void checkWeight() {
+       if (this.weight.equals("600g")) {
             System.out.println("This notebook is very light.");
         } else if(this.weight == "2000g") {
             System.out.println("This notebook is damn heavy.");
@@ -43,5 +43,5 @@ public class Notebook {
         } else {
             System.out.println("It is a latest release. Quite expensive though.");
         }
-    }
+    }*/
 }

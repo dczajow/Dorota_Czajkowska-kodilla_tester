@@ -1,4 +1,4 @@
-package com.kodilla.abstracts.homework;
+package com.kodilla.abstracts.homework.jobs;
 
 public class Journalist extends Job {
 int salary = 4390;
