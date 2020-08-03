@@ -18,15 +18,15 @@ public class CalculatorTestSuite {
     public void testSub() {
         Calculator calculator2 = new Calculator();
         int a = 5;
-        int b = 2;
+        int b = 8;
         int subResult = calculator2.subtract(a, b);
-        assertEquals(3, subResult);
+        assertEquals(-3, subResult);
     }
 
     @Test
     public void testSquared() {
         Calculator calculator3 = new Calculator();
-        int a = 5;
+        int a = -5;
         int squaredResult = calculator3.squared(a);
         assertEquals(25, squaredResult);
     }
