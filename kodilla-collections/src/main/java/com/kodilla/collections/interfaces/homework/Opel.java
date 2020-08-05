@@ -1,7 +1,11 @@
 package com.kodilla.collections.interfaces.homework;
 
+import java.util.Random;
+
 public class Opel implements Car {
-    private int speed = 0;
+    Random random = new Random();
+
+    public int speed = random.nextInt(51);
     public String name;
 
     @Override
