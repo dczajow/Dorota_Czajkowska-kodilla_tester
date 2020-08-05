@@ -3,8 +3,8 @@ public class CashMachine {
     private int[] transactions;
     private int transactionsCounter;
     private int balance;
-    private int maxWithdrawAmount = -300; // 300 is max value available for withdraw
-    private int maxPayInAmount = 1000; // 1000 is a max value to pay in
+    //private int maxWithdrawAmount = -300; // 300 is max value available for withdraw
+    //private int maxPayInAmount = 1000; // 1000 is a max value to pay in
     public CashMachine(int openingBalance){
         this.balance = openingBalance;
         this.transactions = new int[0];
