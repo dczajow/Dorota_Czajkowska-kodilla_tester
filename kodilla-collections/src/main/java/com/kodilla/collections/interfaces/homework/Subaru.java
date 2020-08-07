@@ -1,13 +1,12 @@
 package com.kodilla.collections.interfaces.homework;
 
 public class Subaru implements Car {
-    private int speed = 0;
+    private int speed = 69;
     public String name;
-    public static int value = 50;
+    int value = 12;
 
     @Override
     public void increaseSpeed(int value) {
-
         speed = speed + value;
     }
 

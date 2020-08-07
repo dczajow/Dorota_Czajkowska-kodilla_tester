@@ -16,8 +16,11 @@ public class CarsApplication {
         for(int i = 0; i < cars.length; i++)
             cars[i] = drawCar();
 
-        for(Car car : cars)
-            CarUtils.describeCar(car);
+        for(Car auto : cars) {
+            CarUtils.describeCar(auto);
+            CarUtils.getFaster(auto);
+        }
+
     }
 
     public static Car drawCar(){

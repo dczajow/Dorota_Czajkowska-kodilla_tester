@@ -1,11 +1,15 @@
 package com.kodilla.collections.interfaces.homework;
 
 
+import java.util.Random;
+
 public class CarRace {
     public static void doRace(Car car) {
-        car.increaseSpeed();
-        car.increaseSpeed();
-        car.increaseSpeed();
+        Random random = new Random();
+        int value = random.nextInt(51);
+        car.increaseSpeed(value);
+        car.increaseSpeed(value);
+        car.increaseSpeed(value);
         car.decreaseSpeed();
         car.decreaseSpeed();
 

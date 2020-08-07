@@ -3,11 +3,10 @@ package com.kodilla.collections.interfaces.homework;
 import java.util.Random;
 
 public class Opel implements Car {
-    Random random = new Random();
 
-    public int speed = random.nextInt(51);
     public String name;
-    public static int value = 30;
+    public int speed = 55;
+    int value = 34;
 
     @Override
     public void increaseSpeed(int value) {

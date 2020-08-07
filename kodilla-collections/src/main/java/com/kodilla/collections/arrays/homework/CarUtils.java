@@ -24,4 +24,10 @@ public class CarUtils {
         else return "Car unknown";
     }
 
+    public static void getFaster(Car car) {
+        Random random = new Random();
+        int value = random.nextInt(51);
+        car.increaseSpeed(value);
     }
+
+}

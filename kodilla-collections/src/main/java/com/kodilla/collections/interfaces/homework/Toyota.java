@@ -1,9 +1,9 @@
 package com.kodilla.collections.interfaces.homework;
 
 public class Toyota implements Car {
-    private int speed = 0;
+    private int speed = 92;
     public String name;
-    public static int value = 24;
+    int value = 22;
 
     @Override
     public void increaseSpeed(int value) {
