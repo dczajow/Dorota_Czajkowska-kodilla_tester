@@ -23,7 +23,10 @@ public class CarsApplication {
 
     }
 
+    /* zwraca taką samą wartość dla wszystkich samochodów danej klasy
+
     public static Car drawCar(){
+
         Random random = new Random();
 
         int drawCarType = random.nextInt(3);
@@ -37,7 +40,23 @@ public class CarsApplication {
         } else {
             Toyota toyota = new Toyota();
             return toyota;
-        }
-
+        }*/
+    public static Car drawCar(){
+        Random random = new Random();
+        int drawCarType = random.nextInt(3);
+        int randomSpeed = random.nextInt(40) + 1;
+        if (drawCarType == 0) {
+            Opel opel = new Opel();
+            opel.increaseSpeed(randomSpeed);
+            return opel; }
+        else if (drawCarType == 1){
+            Subaru subaru = new Subaru();
+            subaru.increaseSpeed(randomSpeed);
+            return subaru; }
+        else {
+            Toyota toyota = new Toyota();
+            toyota.increaseSpeed(randomSpeed);
+            return toyota; }
     }
+
 }
