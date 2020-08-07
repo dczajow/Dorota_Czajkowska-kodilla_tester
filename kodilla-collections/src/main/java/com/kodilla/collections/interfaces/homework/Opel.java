@@ -7,10 +7,11 @@ public class Opel implements Car {
 
     public int speed = random.nextInt(51);
     public String name;
+    public static int value = 30;
 
     @Override
-    public void increaseSpeed() {
-        speed = speed + 30;
+    public void increaseSpeed(int value) {
+        speed = speed + value;
     }
 
     @Override

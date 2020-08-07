@@ -3,11 +3,11 @@ package com.kodilla.collections.interfaces.homework;
 public class Toyota implements Car {
     private int speed = 0;
     public String name;
+    public static int value = 24;
 
     @Override
-    public void increaseSpeed() {
-        speed = speed + 30;
-
+    public void increaseSpeed(int value) {
+        speed = speed + value;
     }
 
     @Override
