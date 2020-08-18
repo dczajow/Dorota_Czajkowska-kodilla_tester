@@ -1,17 +1,19 @@
 package com.kodilla.bank.homework;
 public class Bank {
     private CashMachine[] cashMachines;
-    private int cashMachinesCount = 0;
-    public Bank(){
+    //private int cashMachinesCount = 0;
+    public Bank() {
         this.cashMachines = new CashMachine[0];
+
     }
     public void addCashMachine(CashMachine cashMachine){
-        CashMachine[] _tempCashMachines = new CashMachine[this.cashMachines.length + 1];
-        System.arraycopy(this.cashMachines,0 , _tempCashMachines, 0, this.cashMachines.length);
-        _tempCashMachines[this.cashMachines.length] = cashMachine;
-        this.cashMachines = _tempCashMachines;
+        CashMachine[] bankomat = new CashMachine[this.cashMachines.length + 1];
+        System.arraycopy(this.cashMachines,0 , bankomat, 0, this.cashMachines.length);
+        bankomat[this.cashMachines.length] = cashMachine;
+        this.cashMachines = bankomat;
     }
-    public int getCashMachinesNumber(){
+    /*
+    public int getNumberOfCashMachines(){
         return this.cashMachines.length;
     }
     public int getBalanceOfAllCashMachines(){
@@ -54,5 +56,5 @@ public class Bank {
             numberOfTransactions += cm.getNumberOfPayInTransactions();
         }
         return sumFromTransactions / numberOfTransactions;
-    }
+    } */
 }
