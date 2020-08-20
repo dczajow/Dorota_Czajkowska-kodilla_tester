@@ -1,7 +1,7 @@
 package com.kodilla.collections.adv.immutable.homework;
 
 public final class Task {
-    public final String getTitle() {
+  /* public final String getTitle() {
         return title;
     }
 
@@ -9,6 +9,8 @@ public final class Task {
         return duration;
     }
 
-    private final String title;
-    private final int duration;
+   private final String title;
+   private final int duration;
+   */
+
 }
