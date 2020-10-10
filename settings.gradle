@@ -6,4 +6,6 @@ include 'kodilla-collections-advanced'
 include 'com.kodilla.collections.adv'
 include 'com.kodilla.spring.basic'
 include 'kodilla-spring-basic'
+include 'kodilla_stream'
+include 'kodilla-advanced-tests'
 
