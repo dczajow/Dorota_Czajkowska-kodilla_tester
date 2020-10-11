@@ -24,3 +24,4 @@ public class ForumStats {
         System.out.println("Average posts count for users below 40 years old is : " + avgPostsBelow40);
     }
 }
+// poprawic opis commitu
