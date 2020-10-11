@@ -1,62 +1,89 @@
 package com.kodilla.bank.homework;
 
 public class Bank {
+    private CashMachine cashMachine1;
+    private CashMachine cashMachine2;
+    private CashMachine cashMachine3;
 
-    private CashMachine[] cashMachines;
-
-    public Bank(CashMachine[] cashMachines) {
-        this.cashMachines = cashMachines;
+    public Bank() {
+        this.cashMachine1 = new CashMachine();
+        this.cashMachine2 = new CashMachine();
+        this.cashMachine3 = new CashMachine();
     }
 
-    public double getBalance() {
-        double sum = 0;
-
-        for (CashMachine cashMachine : cashMachines) {
-            sum = sum + cashMachine.getBalance();
+    public void addCashMachine1Operation(int money) {
+        if (money % 20 == 0) {
+            this.cashMachine1.addOperation(money);
         }
-
-        return sum;
     }
 
-    public int getPayoutsCount() {
-        int payoutsCount = 0;
-
-        for (CashMachine cashMachine : cashMachines) {
-            payoutsCount = payoutsCount + cashMachine.getPayoutsCount();
+    public void addCashMachine2Operation(int money) {
+        if (money % 20 == 0) {
+            this.cashMachine2.addOperation(money);
         }
-        return payoutsCount;
     }
 
-    public int getPaymentsCount() {
-        int paymentsCount = 0;
-
-        for (CashMachine cashMachine : cashMachines) {
-            paymentsCount = paymentsCount + cashMachine.getPaymentsCount();
+    public void addCashMachine3Operation(int money) {
+        if (money % 20 == 0) {
+            this.cashMachine3.addOperation(money);
         }
-        return paymentsCount;
     }
 
-    public double getPayoutsAverage() {
-        double payoutsSum = 0;
+    public int getCashMachine1Incomes() {
+        return this.cashMachine1.getBalance();
+    }
 
-        for (CashMachine cashMachine : cashMachines) {
-            payoutsSum = payoutsSum + cashMachine.getPayoutsSum();
-        }
-        if (getPayoutsCount() == 0) {
+    public int getCashMachine2Incomes() {
+        return this.cashMachine2.getBalance();
+    }
+
+    public int getCashMachine3Incomes() {
+        return this.cashMachine3.getBalance();
+    }
+
+    public int getAllIncomes() {
+        int allIncomes = getCashMachine1Incomes() + getCashMachine2Incomes() + getCashMachine3Incomes();
+        if (allIncomes == 0) {
             return 0;
+        } else {
+            return allIncomes;
         }
-        return payoutsSum / getPayoutsCount();
     }
 
-    public double getPaymentsAverage() {
-        double paymentsSum = 0;
-
-        for (CashMachine cashMachine : cashMachines) {
-            paymentsSum = paymentsSum + cashMachine.getPaymentsSum();
-        }
-        if (getPaymentsCount() == 0) {
+    public int getAllPayments() {
+        int payments = this.cashMachine1.getNumberOfPayments() + this.cashMachine2.getNumberOfPayments() + this.cashMachine3.getNumberOfPayments();
+        if (payments == 0) {
             return 0;
+        } else {
+            return payments;
         }
-        return paymentsSum / getPaymentsCount();
+    }
+
+    public int getAllWithdraws() {
+        int withdraws = this.cashMachine1.getNumberOfWithdraws() + this.cashMachine2.getNumberOfWithdraws() + this.cashMachine3.getNumberOfWithdraws();
+        if (withdraws == 0) {
+            return 0;
+        } else {
+            return withdraws;
+        }
+
+    }
+
+    public double getAverageOfAllPayments() {
+        double avgPayments = this.cashMachine1.getAverageOfPayments() + this.cashMachine2.getAverageOfPayments() + this.cashMachine3.getAverageOfPayments();
+        if (avgPayments == 0) {
+            return 0;
+        } else {
+            return avgPayments;
+        }
+    }
+
+    public double getAverageOfAllWithdraws() {
+        double avgWithdraw = this.cashMachine1.getAverageOfWithdraws() + this.cashMachine2.getNumberOfWithdraws() + this.cashMachine3.getNumberOfWithdraws();
+        if (avgWithdraw == 0) {
+            return 0;
+        } else {
+            return avgWithdraw;
+        }
     }
 }
