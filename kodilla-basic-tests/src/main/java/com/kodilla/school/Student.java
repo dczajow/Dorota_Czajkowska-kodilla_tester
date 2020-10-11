@@ -14,6 +14,7 @@ public class Student {
         this.geography = new Grades();
         this.history = new Grades();
     }
+
     public void addMathGrade(int grade) {
         if (grade > 0 && grade < 7) {
             this.maths.add(grade);
@@ -37,6 +38,7 @@ public class Student {
             this.history.add(grade);
         }
     }
+
     public double getMathsAverage() {
         return this.maths.getAverage();
     }
@@ -54,8 +56,13 @@ public class Student {
     }
 
     public double getAverage() {
-        double sum = this.geography.getAverage() + this.history.getAverage() + this.maths.getAverage() + this.physics.getAverage();
-        return sum/4;
+        double subjectsAverage = getMathsAverage() + getPhysicsAverage() + getGeographyAverage() + getHistoryAverage();
+        if (subjectsAverage == 0) {
+            return 0;
+        } else {
+            return subjectsAverage / 4;
+        }
+
     }
 
 }
