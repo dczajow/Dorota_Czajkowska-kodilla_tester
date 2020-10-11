@@ -29,7 +29,7 @@ public class Shop {
             return null;
     }
 
-    public List<Order> getOrdersByPrice(double minPrice, double maxPrice) {
+   /* public List<Order> getOrdersByPrice(double minPrice, double maxPrice) {
         List<Order> foundOrders = orders.stream()
                 .filter(order -> order.getPrice() > minPrice && order.getPrice() < maxPrice)
                 .collect(Collectors.toList());
@@ -37,7 +37,7 @@ public class Shop {
             return foundOrders;
         else
             return null;
-    }
+    }*/
 
     public int getNumberOfOrders() {
         return this.orders.size();
