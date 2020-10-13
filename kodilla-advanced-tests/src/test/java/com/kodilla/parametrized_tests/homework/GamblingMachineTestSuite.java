@@ -12,7 +12,7 @@ import java.util.Set;
 public class GamblingMachineTestSuite {
 
     @ParameterizedTest
-    @CsvFileSource(resources = "GoodNumbers.csv")
+    @CsvFileSource(resources = "/GoodNumbers.csv")
     public void shouldCheckWinsWorks(int value1, int value2, int value3, int value4, int value5, int value6)
             throws InvalidNumbersException {
         GamblingMachine gamblingMachine = new GamblingMachine();
@@ -29,7 +29,7 @@ public class GamblingMachineTestSuite {
     }
 
     @ParameterizedTest
-    @CsvFileSource(resources = "WrongNumbers.csv")
+    @CsvFileSource(resources = "/WrongNumbers.csv")
 
     public void shouldErrorIfAddOneGoodValue(int value1, int value2, int value3, int value4, int value5, int value6) {
         GamblingMachine gamblingMachine = new GamblingMachine();
