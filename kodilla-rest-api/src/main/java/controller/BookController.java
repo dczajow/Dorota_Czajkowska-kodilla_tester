@@ -1,8 +1,13 @@
 package controller;
 
+import domain.BookDto;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.*;
+import service.BookService;
+
 import java.util.List;
 
-@RestController
+@Controller
 @RequestMapping("/books")
 public class BookController {
 
