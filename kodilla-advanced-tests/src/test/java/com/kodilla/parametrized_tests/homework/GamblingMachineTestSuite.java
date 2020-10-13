@@ -13,33 +13,21 @@ public class GamblingMachineTestSuite {
 
     @ParameterizedTest
     @CsvFileSource(resources = "/GoodNumbers.csv")
-    public void shouldCheckWinsWorks(int value1, int value2, int value3, int value4, int value5, int value6)
+    public void shouldCheckWinsWorks(int value)
             throws InvalidNumbersException {
         GamblingMachine gamblingMachine = new GamblingMachine();
         Set<Integer> set = new HashSet<>();
-        set.add(value1);
-        set.add(value2);
-        set.add(value3);
-        set.add(value4);
-        set.add(value5);
-        set.add(value6);
-        int x = gamblingMachine.howManyWins(set);
-        Assertions.assertTrue(x <= 6);
-        Assertions.assertTrue(x >= 0);
+        set.add(1);
+
     }
 
     @ParameterizedTest
     @CsvFileSource(resources = "/WrongNumbers.csv")
-
-    public void shouldErrorIfAddOneGoodValue(int value1, int value2, int value3, int value4, int value5, int value6) {
+    public void shouldErrorIfAddOneGoodValue(int value) {
         GamblingMachine gamblingMachine = new GamblingMachine();
         Set<Integer> set = new HashSet<>();
-        set.add(value1);
-        set.add(value2);
-        set.add(value3);
-        set.add(value4);
-        set.add(value5);
-        set.add(value6);
+        set.add(1);
+
         Assertions.assertThrows(InvalidNumbersException.class, () -> {
             gamblingMachine.howManyWins(set);
         });
